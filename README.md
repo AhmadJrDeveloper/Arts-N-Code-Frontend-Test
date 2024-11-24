@@ -1,70 +1,111 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend - React Application
+
+## Overview
+
+This is the frontend for a **PERN stack** application, built using **React.js**, **Material UI (MUI)**, **Google Maps API**, **SweetAlert2**, and **Axios**. The frontend interacts with the backend to display businesses and their location, manage admin authentication, and show interactive maps and alerts.
+
+---
+
+## Features
+
+- **Material UI (MUI)** for modern UI components and styling
+- **Google Maps API** integration for displaying maps
+- **SweetAlert2** for interactive alerts
+- **Axios** for making HTTP requests to the backend
+
+---
+
+## Tech Stack
+
+- **React.js** (Frontend framework)
+- **Material UI (MUI)** (UI components)
+- **Google Maps API** (Maps integration)
+- **SweetAlert2** (Alert popups)
+- **Axios** (HTTP requests)
+
+---
+
+## Prerequisites
+
+Before running this project, ensure you have the following installed on your local machine:
+
+- **Node.js** (Runtime)  
+  You can download Node.js from the official website:  
+  [Node.js download](https://nodejs.org/en/download/)
+
+- **Google Maps API Key**  
+  You'll need to set up a Google Maps API key. Follow the instructions in the [Google Cloud Console](https://console.cloud.google.com/) to get your API key.
+
+---
+
+## Installation
+
+Follow these steps to get the frontend up and running:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repo-url>
+   ```
+
+2. **Navigate to the frontend directory:**
+
+   ```bash
+   cd <frontend-folder>
+   ```
+
+3. **Install dependencies:**
+
+   Make sure you have **Node.js** installed. Once you have it, install the necessary dependencies by running:
+
+   ```bash
+   npm install
+   ```
+
+4. **Set up Google Maps API Key:**
+
+   - Obtain your Google Maps API key from [Google Cloud Console](https://console.cloud.google.com/).
+   - Create a `.env` file in the root of the project directory and add your Google Maps API key like so:
+
+     ```bash
+     REACT_APP_API_KEY=your-google-maps-api-key
+     ```
+
+5. **Run the app:**
+
+   Start the development server by running:
+
+   ```bash
+   npm start
+   ```
+
+   This will start the frontend application on [http://localhost:3000](http://localhost:3000).
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the following commands:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode.Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload when you make changes, and you may also see lint errors in the console.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Material UI (MUI):**  
+  MUI is used for various components like buttons, modals, and form elements to ensure a modern and responsive UI.
 
-### `npm run build`
+- **Google Maps API Integration:**  
+  The app uses the Google Maps API to display interactive maps that users can interact with.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **SweetAlert2:**  
+  SweetAlert2 is used to display stylish and interactive alert popups, improving user experience.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Axios:**  
+  Axios is used to handle HTTP requests to the backend for fetching and posting data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
