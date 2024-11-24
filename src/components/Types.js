@@ -119,7 +119,7 @@ const Types = () => {
       }
     } catch (error) {
       console.error("Error deleting type:", error);
-      Swal.fire("Error!", "There was a problem deleting the type.", "error");
+      Swal.fire("Error!", error.response.data.message, "error");
     }
   };
   
