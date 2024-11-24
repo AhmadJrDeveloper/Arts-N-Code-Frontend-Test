@@ -16,6 +16,7 @@ import { Delete as DeleteIcon, Edit as EditIcon } from "@mui/icons-material";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
 
 const Types = () => {
   const [types, setTypes] = useState([]);
@@ -94,24 +95,34 @@ const Types = () => {
   };
 
   const handleDeleteType = async (id) => {
-    const confirmation = window.confirm("Are you sure you want to delete this type?");
+    try {
+      const result = await Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Yes, delete it!",
+      });
   
-    if (confirmation) {
-      try {
+      if (result.isConfirmed) {
         const token = localStorage.getItem("authToken");
         await axios.delete(`http://localhost:4000/type/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
+  
         setTypes((prev) => prev.filter((type) => type.id !== id));
-        toast.success("Type deleted successfully!"); 
-      } catch (error) {
-        console.error("Error deleting type:", error);
-        toast.error("Error deleting type!");
+        Swal.fire("Deleted!", "The type has been deleted.", "success");
       }
+    } catch (error) {
+      console.error("Error deleting type:", error);
+      Swal.fire("Error!", "There was a problem deleting the type.", "error");
     }
   };
+  
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
