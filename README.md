@@ -7,7 +7,7 @@ This is the frontend for a **PERN stack** application, built using **React.js**,
 
 ---
 
-## Features
+## Libraries and API
 
 - **Material UI (MUI)** for modern UI components and styling
 - **Google Maps API** integration for displaying maps
@@ -93,7 +93,7 @@ In the project directory, you can run the following commands:
 Runs the app in the development mode.Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload when you make changes, and you may also see lint errors in the console.
 
 
-## Features
+## Libraries
 
 - **Material UI (MUI):**  
   MUI is used for various components like buttons, modals, and form elements to ensure a modern and responsive UI.
